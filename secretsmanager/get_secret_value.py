@@ -15,13 +15,13 @@ class SecretsManager(object):
         self.aws_region = aws_region
 
     def get_secret_values(self, secret_name):
-        client = boto3.client(
-                    'secretsmanager',
-                    aws_access_key_id=self.aws_access_key_id,
-                    aws_secret_access_key=self.aws_secret_access_key,
-                    region_name=self.aws_region
-                 )
         try:
+            client = boto3.client(
+                'secretsmanager',
+                aws_access_key_id=self.aws_access_key_id,
+                aws_secret_access_key=self.aws_secret_access_key,
+                region_name=self.aws_region
+            )
             resp = client.get_secret_value(SecretId=secret_name)
             secret_values = json.loads(resp['SecretString'])
         except ClientError:

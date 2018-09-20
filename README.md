@@ -8,5 +8,6 @@ Set Up Loacally
 Make sure you have [Docker Compose](https://docs.docker.com/compose/install/).
 
 ```sh
+$ docker-compose build
 $ docker-compose run app bash
 ```

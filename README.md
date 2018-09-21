@@ -2,6 +2,7 @@ aws-sm
 ---
 A Python wrapper around the AWS Secrets Manager used Boto3.
 
+[![CircleCI](https://circleci.com/gh/jumpyoshim/aws-sm.svg?style=svg)](https://circleci.com/gh/jumpyoshim/aws-sm)
 
 Set Up Loacally
 ---

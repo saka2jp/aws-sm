@@ -15,6 +15,10 @@ jobs:
             pipenv install --system --dev
       - save_cache:
           key: deps1-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
+          paths:
+            - ".venv"
+            - "/usr/local/bin"
+            - "/usr/local/lib/python3.7/site-packages"
       - run:
           command: |
             py.test --tb=line --cov-report=html

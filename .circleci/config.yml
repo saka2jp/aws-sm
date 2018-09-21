@@ -1,32 +1,33 @@
 version: 2
 jobs:
   build:
-    docker:
-      - image: circleci/python:3.7-stretch-browsers
-
     working_directory: ~/aws-sm
-
+    docker:
+      - image: circleci/python:3.7
     steps:
       - checkout
-
+      - run: sudo chown -R circleci:circleci /usr/local/bin
+      - run: sudo chown -R circleci:circleci /usr/local/lib/python3.7/site-packages
+      - restore_cache:
+          key: deps1-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
       - run:
-          name: install dependencies
           command: |
-            pip install pipenv
             pipenv install --system --dev
-
+      - save_cache:
+          key: deps1-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
+          paths:
+            - ".venv"
+            - "/usr/local/bin"
+            - "/usr/local/lib/python3.7/site-packages"
       - run:
-          name: run tests
           command: |
-            py.test --tb=line
-
+            py.test --tb=line --cov-report=html
+      - store_artifacts:
+          path: htmlcov/
       - run:
-          name: run flake8
           command: |
             flake8
-
       - run:
-          name: run radon
           command: |
             radon cc -n C .
             radon mi -n B .

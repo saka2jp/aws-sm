@@ -12,10 +12,6 @@ jobs:
           key: deps1-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
       - run:
           command: |
-<<<<<<< Updated upstream
-=======
-            sudo pip install pipenv
->>>>>>> Stashed changes
             pipenv install --system --dev
       - save_cache:
           key: deps1-{{ .Branch }}-{{ checksum "Pipfile.lock" }}

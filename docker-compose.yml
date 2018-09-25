@@ -3,5 +3,7 @@ version: '3'
 services:
   app:
     build: .
+    command: bash -c 'pipenv install --system --dev && bash'
     volumes:
       - .:/app
+    tty: true

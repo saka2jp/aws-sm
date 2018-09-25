@@ -1,12 +1,4 @@
-[![CircleCI](https://circleci.com/gh/jumpyoshim/aws-sm.svg?style=svg)](https://circleci.com/gh/jumpyoshim/aws-sm)
-
-[![CircleCI](https://img.shields.io/badge/coverage-95%25-green.svg)](https://circleci.com/gh/jumpyoshim/aws-sm)
-
-[![PyPI](https://img.shields.io/badge/pypi-v0.0.1-blue.svg)]()
-
-[
-![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)
-](https://opensource.org/licenses/MIT)
+[![CircleCI](https://circleci.com/gh/jumpyoshim/aws-sm.svg?style=svg)](https://circleci.com/gh/jumpyoshim/aws-sm) [![CircleCI](https://img.shields.io/badge/coverage-100%25-brightgreen.svg)](https://circleci.com/gh/jumpyoshim/aws-sm) [![PyPI](https://img.shields.io/badge/pypi-v0.0.1-blue.svg)](https://pypi.org/project/aws-sm/) [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/Django.svg)](https://pypi.org/project/aws-sm/) [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://opensource.org/licenses/MIT)
 
 
 # aws-sm
@@ -37,7 +29,7 @@ This is sample code using aws-sm to get `USER_NAME` and `PASSWORD` from `tutoria
 
 This is AWS Console of Secrets Manager.
 
-`AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` are unnecessary when attaching the appropriate IAM Role.The default policy is [SecretsManagerReadWrite](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_identity-based-policies.html).
+`AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` are unnecessary when attaching the appropriate IAM Role. The default policy is [SecretsManagerReadWrite](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_identity-based-policies.html).
 
 
 # Set Up Loacally

@@ -1,9 +1,15 @@
-[![CircleCI](https://circleci.com/gh/jumpyoshim/aws-sm.svg?style=svg)](https://circleci.com/gh/jumpyoshim/aws-sm) [![CircleCI](https://img.shields.io/badge/coverage-100%25-brightgreen.svg)](https://circleci.com/gh/jumpyoshim/aws-sm) [![PyPI](https://img.shields.io/badge/pypi-v0.0.1-blue.svg)](https://pypi.org/project/aws-sm/) [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/Django.svg)](https://pypi.org/project/aws-sm/) [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://opensource.org/licenses/MIT)
+[![CircleCI](https://circleci.com/gh/jumpyoshim/aws-sm.svg?style=svg)](https://circleci.com/gh/jumpyoshim/aws-sm) [![CircleCI](https://img.shields.io/badge/coverage-100%25-brightgreen.svg)](https://circleci.com/gh/jumpyoshim/aws-sm) [![PyPI](https://img.shields.io/badge/pypi-v0.0.1-blue.svg)](https://pypi.org/project/aws-sm/) [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/Django.svg)](https://pypi.org/project/aws-sm/)  [![Updates](https://pyup.io/repos/github/jumpyoshim/aws-sm/shield.svg)](https://pyup.io/repos/github/jumpyoshim/aws-sm/)  [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://opensource.org/licenses/MIT)
 
 
 # aws-sm
 A Python wrapper around [AWS Secrets Manager](https://aws.amazon.com/jp/secrets-manager/) using Boto3.
 
+# Installation
+Installing from PyPI is as easy as doing:
+
+```sh
+$ pip install aws-sm
+```
 
 # Usage
 

@@ -1,0 +1,6 @@
+schedule: "every day"
+requirements:
+  - Pipfile
+  - Pipfile.lock
+assignees:
+  - jumpyoshim

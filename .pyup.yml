@@ -1,6 +1,5 @@
-schedule: "every day"
+schedule: "every week"
 requirements:
   - Pipfile
-  - Pipfile.lock
 assignees:
   - jumpyoshim

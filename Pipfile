@@ -1,16 +1,23 @@
 [[source]]
+
 url = "https://pypi.org/simple"
 verify_ssl = true
 name = "pypi"
 
+
 [packages]
-"boto3" = "==1.9.*"
+
+boto3 = "==1.9.12"
+
 
 [dev-packages]
+
 pytest-cov = "==2.6.0"
-"flake8" = "==3.5.0"
-"flake8-isort" = "==2.5"
+flake8 = "==3.5.0"
+flake8-isort = "==2.5"
 radon = "==2.2.0"
 
+
 [requires]
+
 python_version = "3.7"

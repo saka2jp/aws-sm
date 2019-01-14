@@ -326,10 +326,10 @@
         },
         "testfixtures": {
             "hashes": [
-                "sha256:334497d26344e8c0c5d01b4d785a1c83464573151e6a5f7ab250eb7981d452ec",
-                "sha256:53c06c1feb0bf378d63c54d1d96858978422d5a34793b39f0dcb0e44f8ec26f4"
+                "sha256:969e967df5d8e12012b5c90986428919b1068c20841b0077b3e29e9a928605d3",
+                "sha256:b6c05222ce8d3c34a1353ff30c73da55f61ef58153229a5664ef7110ec340cdd"
             ],
-            "version": "==6.3.0"
+            "version": "==6.4.3"
         },
         "tqdm": {
             "hashes": [

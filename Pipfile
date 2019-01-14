@@ -14,7 +14,7 @@ boto3 = "==1.9.78"
 
 pytest-cov = "==2.6.1"
 flake8 = "==3.6.0"
-flake8-isort = "==2.5"
+flake8-isort = "==2.6.0"
 radon = "==2.4.0"
 twine = "==1.12.1"
 

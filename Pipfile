@@ -7,7 +7,7 @@ name = "pypi"
 
 [packages]
 
-boto3 = "==1.9.82"
+boto3 = "==1.9.86"
 
 
 [dev-packages]
@@ -15,7 +15,7 @@ boto3 = "==1.9.82"
 pytest-cov = "==2.6.1"
 flake8 = "==3.6.0"
 flake8-isort = "==2.6.0"
-radon = "==2.4.0"
+radon = "==3.0.0"
 twine = "==1.12.1"
 
 

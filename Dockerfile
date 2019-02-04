@@ -8,5 +8,6 @@ RUN mkdir /app
 WORKDIR /app
 ADD . /app/
 
-RUN pip install pipenv && \
+RUN pip install --upgrade pip && \
+    pip install pipenv && \
     pipenv install --system --deploy

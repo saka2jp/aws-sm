@@ -13,7 +13,7 @@ boto3 = "==1.9.91"
 [dev-packages]
 
 pytest-cov = "==2.6.1"
-flake8 = "==3.6.0"
+flake8 = "==3.7.5"
 flake8-isort = "==2.6.0"
 radon = "==3.0.0"
 twine = "==1.12.1"

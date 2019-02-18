@@ -19,7 +19,7 @@ jobs:
       - run: sudo chown -R circleci:circleci /usr/local/bin
       - run: sudo chown -R circleci:circleci /usr/local/lib/python3.7/site-packages
       - restore_cache:
-          key: deps9-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
+          key: deps9-37-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
       - run:
           command: |
             export PIPENV_VENV_IN_PROJECT=true
@@ -27,7 +27,7 @@ jobs:
             sudo pip install pipenv
             pipenv install --system --dev
       - save_cache:
-          key: deps9-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
+          key: deps9-37-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
           paths:
             - ".venv"
             - "/usr/local/bin"
@@ -58,7 +58,7 @@ jobs:
       - run: sudo chown -R circleci:circleci /usr/local/bin
       - run: sudo chown -R circleci:circleci /usr/local/lib/python3.6/site-packages
       - restore_cache:
-          key: deps9-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
+          key: deps9-36-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
       - run:
           command: |
             export PIPENV_VENV_IN_PROJECT=true
@@ -66,7 +66,7 @@ jobs:
             sudo pip install pipenv
             pipenv install --system --dev
       - save_cache:
-          key: deps9-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
+          key: deps9-36-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
           paths:
             - ".venv"
             - "/usr/local/bin"
@@ -97,7 +97,7 @@ jobs:
       - run: sudo chown -R circleci:circleci /usr/local/bin
       - run: sudo chown -R circleci:circleci /usr/local/lib/python3.5/site-packages
       - restore_cache:
-          key: deps9-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
+          key: deps9-35-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
       - run:
           command: |
             export PIPENV_VENV_IN_PROJECT=true
@@ -105,7 +105,7 @@ jobs:
             sudo pip install pipenv
             pipenv install --system --dev
       - save_cache:
-          key: deps9-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
+          key: deps9-35-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
           paths:
             - ".venv"
             - "/usr/local/bin"
@@ -136,7 +136,7 @@ jobs:
       - run: sudo chown -R circleci:circleci /usr/local/bin
       - run: sudo chown -R circleci:circleci /usr/local/lib/python2.7/site-packages
       - restore_cache:
-          key: deps9-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
+          key: deps9-27-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
       - run:
           command: |
             export PIPENV_VENV_IN_PROJECT=true
@@ -144,7 +144,7 @@ jobs:
             sudo pip install pipenv
             pipenv install --system --dev
       - save_cache:
-          key: deps9-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
+          key: deps9-27-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
           paths:
             - ".venv"
             - "/usr/local/bin"

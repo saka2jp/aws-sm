@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  build:
+  test_3_7:
     working_directory: ~/aws-sm
     docker:
       - image: circleci/python:3.7

@@ -14,7 +14,7 @@ setuptools.setup(
     url='https://github.com/jumpyoshim/aws-sm',
     python_requires='>=3.5',
     install_requires=[
-        'boto3==1.9.37',
+        'boto3~=1.9',
     ],
     packages=setuptools.find_packages(),
     classifiers=[

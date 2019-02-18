@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 boto3 = "~=1.9"
+pathlib2 = "~=2.3"
 
 [dev-packages]
 pytest-cov = "~=2.6"

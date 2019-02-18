@@ -12,7 +12,7 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type='text/markdown',
     url='https://github.com/jumpyoshim/aws-sm',
-    python_requires='>=3.5',
+    python_requires='>=3.6',
     install_requires=[
         'boto3~=1.9',
     ],

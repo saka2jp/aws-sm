@@ -47,7 +47,7 @@ jobs:
             radon mi -n B .
   test-3.6:
     docker:
-      - image: circleci/python:3.6
+      - image: circleci/python:3.7
         environment:
           PIPENV_VENV_IN_PROJECT: true
     working_directory: ~/repo

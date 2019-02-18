@@ -289,11 +289,10 @@
         },
         "radon": {
             "hashes": [
-                "sha256:ef5b38ee6c9994032a4cb3de0f6689e0046024ae3ff3b16944d72a4dce99650e",
-                "sha256:fa3167f531d3b01453697d73b89d7e00a3fbadbd7087a228c3c092232dcd1ecd"
+                "sha256:6d8f40b02141bb94c6b87cc4fdb6ca1f8ff6ab4128f4f0b155d4bab08736ca40",
+                "sha256:ecb54053f8c2ead7226c5c7d06134305c44af410ddcf79689c796e4f8af6d428"
             ],
-            "index": "pypi",
-            "version": "==3.0.0"
+            "version": "==3.0.1"
         },
         "readme-renderer": {
             "hashes": [

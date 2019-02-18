@@ -10,26 +10,24 @@ workflows:
 jobs:
   test-3.7: &test-template
     docker:
-      - image: circleci/python:3.7-jessie
+      - image: circleci/python:3.7
     working_directory: ~/repo
     steps:
       - checkout
-      - run:
-          name: Install Fish
-          command: |
-            echo "deb http://ftp.debian.org/debian jessie-backports main" | sudo tee /etc/apt/sources.list.d/jessie-backports.list
-            sudo apt-get update
-            sudo apt-get -t jessie-backports install fish
       - restore_cache:
-          key: deps1-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
+          keys:
+            - cache-{{ checksum "Pipfile.lock" }}
+            - cache-
       - run:
           command: |
+            export PIPENV_VENV_IN_PROJECT=true
+            sudo pip install pipenv
             pipenv install --system --dev
       - save_cache:
-          key: deps1-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
+          key: cache-{{ checksum "Pipfile.lock" }}
           paths:
-            - ".venv"
-            - "/usr/local/bin"
+            - ~/.local
+            - ~/.cache
       - run:
           command: |
             py.test --tb=line --cov-report=html
@@ -45,12 +43,12 @@ jobs:
   test-3.6:
     <<: *test-template
     docker:
-      - image: circleci/python:3.6-jessie
+      - image: circleci/python:3.6
   test-3.5:
     <<: *test-template
     docker:
-      - image: circleci/python:3.5-jessie
+      - image: circleci/python:3.5
   test-2.7:
     <<: *test-template
     docker:
-      - image: circleci/python:2.7-jessie
+      - image: circleci/python:2.7

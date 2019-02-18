@@ -16,7 +16,7 @@ pytest-cov = "==2.6.1"
 flake8 = "==3.7.5"
 flake8-isort = "==2.6.0"
 radon = "==3.0.1"
-twine = "==1.12.1"
+twine = "==1.13.0"
 pytest-mock = "==1.10.1"
 
 

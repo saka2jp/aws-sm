@@ -175,10 +175,10 @@
         },
         "flake8-isort": {
             "hashes": [
-                "sha256:1e67b6b90a9b980ac3ff73782087752d406ce0a729ed928b92797f9fa188917e",
-                "sha256:81a8495eefed3f2f63f26cd2d766c7b1191e923a15b9106e6233724056572c68"
+                "sha256:64454d1f154a303cfe23ee715aca37271d4f1d299b2f2663f45b73bff14e36a9",
+                "sha256:aa0c4d004e6be47e74f122f5b7f36554d0d78ad8bf99b497a460dedccaa7cce9"
             ],
-            "version": "==2.7.0"
+            "version": "==2.8.0"
         },
         "flake8-polyfill": {
             "hashes": [

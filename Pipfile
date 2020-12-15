@@ -10,7 +10,7 @@ boto3 = "~=1.9"
 pytest-cov = "~=2.6"
 flake8 = "~=3.7"
 flake8-isort = "~=2.6"
-radon = "~=3.0"
+radon = "~=4.3"
 twine = "~=1.13"
 pytest-mock = "~=1.10"
 

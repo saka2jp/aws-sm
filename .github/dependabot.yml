@@ -2,9 +2,7 @@ version: 2
 updates:
 - package-ecosystem: pip
   directory: "/"
-  schedule:
-    interval: daily
-    time: "20:00"
+  update_schedule: "monthly"
   open-pull-requests-limit: 10
   reviewers:
   - jumpyoshim

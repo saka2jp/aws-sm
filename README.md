@@ -1,10 +1,11 @@
-[![CircleCI](https://circleci.com/gh/jumpyoshim/aws-sm.svg?style=svg)](https://circleci.com/gh/jumpyoshim/aws-sm) [![CircleCI](https://img.shields.io/badge/coverage-100%25-brightgreen.svg)](https://circleci.com/gh/jumpyoshim/aws-sm) [![Python 3](https://pyup.io/repos/github/jumpyoshim/aws-sm/python-3-shield.svg)](https://pyup.io/repos/github/jumpyoshim/aws-sm/) [![Updates](https://pyup.io/repos/github/jumpyoshim/aws-sm/shield.svg)](https://pyup.io/repos/github/jumpyoshim/aws-sm/) [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://opensource.org/licenses/MIT)
-
+[![CircleCI](https://circleci.com/gh/jumpyoshim/aws-sm.svg?style=svg)](https://circleci.com/gh/jumpyoshim/aws-sm) [![CircleCI](https://img.shields.io/badge/coverage-100%25-brightgreen.svg)](https://circleci.com/gh/jumpyoshim/aws-sm) [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://opensource.org/licenses/MIT) [![Downloads](https://pepy.tech/badge/aws-sm)](https://pepy.tech/project/aws-sm)
 
 # aws-sm
+
 A Python wrapper around [AWS Secrets Manager](https://aws.amazon.com/jp/secrets-manager/) using Boto3.
 
 # Installation
+
 Installing from PyPI is as easy as doing:
 
 ```sh
@@ -36,7 +37,6 @@ This is sample code using aws-sm to get `USER_NAME` and `PASSWORD` from `tutoria
 This is AWS Console of Secrets Manager.
 
 `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` are unnecessary when attaching the appropriate IAM Role. The default policy is [SecretsManagerReadWrite](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_identity-based-policies.html).
-
 
 # Set Up Loacally
 

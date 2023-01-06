@@ -1,159 +1,53 @@
 version: 2
 workflows:
-  version: 2
-  test:
+  matrix-tests:
     jobs:
-      - test-3.11
-      - test-3.10
-      - test-3.9
-      - test-3.8
+      - test:
+          matrix:
+            parameters:
+              version:
+                - 3.11
+                - 3.10
+                - 3.9
+                - 3.8
+
+executors:
+  python-docker:
+    parameters:
+      version:
+        description: "version tag"
+        default: "lts"
+        type: string
+    docker:
+      - image: cimg/python:<<parameters.version>>
 
 jobs:
-  test-3.11:
-    docker:
-      - image: cimg/python:3.11
-        environment:
-          PIPENV_VENV_IN_PROJECT: true
-    working_directory: ~/repo
+  test:
+    parameters:
+      version:
+        description: "version tag"
+        default: "lts"
+        type: string
+    executor:
+      name: python-docker
+      version: <<parameters.version>>
     steps:
       - checkout
-      - restore_cache:
-          key: deps9-37-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
+      - python/install-packages:
+          pkg-manager: pipenv
       - run:
-          command: |
-            export PIPENV_VENV_IN_PROJECT=true
-            sudo pip install --upgrade pip
-            sudo pip install pipenv
-            pipenv install --system --dev
-      - save_cache:
-          key: deps9-37-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
-          paths:
-            - ".venv"
-            - "/usr/local/bin"
-            - "/usr/local/lib/python3.11/site-packages"
-      - run:
-          command: |
-            pytest --tb=line --cov-report=html
+          name: Run tests
+          command: python -m pytest --tb=line --cov-report=html
       - store_test_results:
           path: test-results
       - store_artifacts:
           path: test-results
           destination: tr1
       - run:
-          command: |
-            flake8
+          name: Run flake8
+          command: python -m flake8
       - run:
+          name: Run radon
           command: |
-            radon cc -n C .
-            radon mi -n B .
-  test-3.10:
-    docker:
-      - image: cimg/python:3.10
-        environment:
-          PIPENV_VENV_IN_PROJECT: true
-    working_directory: ~/repo
-    steps:
-      - checkout
-      - restore_cache:
-          key: deps9-37-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
-      - run:
-          command: |
-            export PIPENV_VENV_IN_PROJECT=true
-            sudo pip install --upgrade pip
-            sudo pip install pipenv
-            pipenv install --system --dev
-      - save_cache:
-          key: deps9-37-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
-          paths:
-            - ".venv"
-            - "/usr/local/bin"
-            - "/usr/local/lib/python3.10/site-packages"
-      - run:
-          command: |
-            pytest --tb=line --cov-report=html
-      - store_test_results:
-          path: test-results
-      - store_artifacts:
-          path: test-results
-          destination: tr1
-      - run:
-          command: |
-            flake8
-      - run:
-          command: |
-            radon cc -n C .
-            radon mi -n B .
-  test-3.9:
-    docker:
-      - image: cimg/python:3.9
-        environment:
-          PIPENV_VENV_IN_PROJECT: true
-    working_directory: ~/repo
-    steps:
-      - checkout
-      - restore_cache:
-          key: deps9-37-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
-      - run:
-          command: |
-            export PIPENV_VENV_IN_PROJECT=true
-            sudo pip install --upgrade pip
-            sudo pip install pipenv
-            pipenv install --system --dev
-      - save_cache:
-          key: deps9-37-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
-          paths:
-            - ".venv"
-            - "/usr/local/bin"
-            - "/usr/local/lib/python3.9/site-packages"
-      - run:
-          command: |
-            pytest --tb=line --cov-report=html
-      - store_test_results:
-          path: test-results
-      - store_artifacts:
-          path: test-results
-          destination: tr1
-      - run:
-          command: |
-            flake8
-      - run:
-          command: |
-            radon cc -n C .
-            radon mi -n B .
-  test-3.8:
-    docker:
-      - image: cimg/python:3.8
-        environment:
-          PIPENV_VENV_IN_PROJECT: true
-    working_directory: ~/repo
-    steps:
-      - checkout
-      - restore_cache:
-          key: deps9-37-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
-      - run:
-          command: |
-            export PIPENV_VENV_IN_PROJECT=true
-            sudo pip install --upgrade pip
-            sudo pip install pipenv
-            pipenv install --system --dev
-      - save_cache:
-          key: deps9-37-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
-          paths:
-            - ".venv"
-            - "/usr/local/bin"
-            - "/usr/local/lib/python3.8/site-packages"
-      - run:
-          command: |
-            pytest --tb=line --cov-report=html
-      - store_test_results:
-          path: test-results
-      - store_artifacts:
-          path: test-results
-          destination: tr1
-      - run:
-          command: |
-            flake8
-      - run:
-          command: |
-            radon cc -n C .
-            radon mi -n B .
+            python -m radon cc -n C .
+            python -m radon mi -n B .

@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/jumpyoshim/aws-sm.svg?style=svg)](https://circleci.com/gh/jumpyoshim/aws-sm) [![CircleCI](https://img.shields.io/badge/coverage-100%25-brightgreen.svg)](https://circleci.com/gh/jumpyoshim/aws-sm) [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://opensource.org/licenses/MIT) [![Downloads](https://pepy.tech/badge/aws-sm)](https://pepy.tech/project/aws-sm)
+[![test](https://github.com/saka2jp/aws-sm/actions/workflows/test.yml/badge.svg)](https://github.com/saka2jp/aws-sm/actions/workflows/test.yml) [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://opensource.org/licenses/MIT) [![Downloads](https://pepy.tech/badge/aws-sm)](https://pepy.tech/project/aws-sm)
 
 # aws-sm
 

@@ -1,38 +1,25 @@
-version: 2
+version: 2.1
+
 workflows:
-  matrix-tests:
+  tests:
     jobs:
       - test:
           matrix:
             parameters:
-              version:
-                - 3.11
-                - 3.10
-                - 3.9
-                - 3.8
-
-executors:
-  python-docker:
-    parameters:
-      version:
-        description: "version tag"
-        default: "lts"
-        type: string
-    docker:
-      - image: cimg/python:<<parameters.version>>
+              python-version: ["3.11", "3.10", "3.9", "3.8"]
 
 jobs:
   test:
     parameters:
-      version:
-        description: "version tag"
-        default: "lts"
+      python-version:
         type: string
     executor:
       name: python-docker
       version: <<parameters.version>>
     steps:
       - checkout
+      - python/install:
+          node-version: << parameters.python-version >>
       - python/install-packages:
           pkg-manager: pipenv
       - run:

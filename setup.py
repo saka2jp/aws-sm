@@ -5,14 +5,14 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="aws-sm",
-    version="1.1.0",
-    author="jumpyoshim",
-    author_email="jumpyoshim@gmail.com",
+    version="1.2.0",
+    author="saka2jp",
+    author_email="saka2jp@gmail.com",
     description="A Python wrapper around the AWS Secrets Manager using Boto3",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/jumpyoshim/aws-sm",
-    python_requires=">=3.6",
+    url="https://github.com/saka2jp/aws-sm",
+    python_requires=">=3.7",
     install_requires=[
         "boto3~=1.16",
     ],

@@ -16,4 +16,4 @@ pytest-mock = "~=3.3"
 flake8-polyfill = "~=1.0"
 
 [requires]
-python_version = "3.8"
+python_version = "3.11"

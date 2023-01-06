@@ -1,6 +1,6 @@
-FROM python:3.8-slim
+FROM python:3.11-slim
 
-LABEL maintainer="jumpyoshim <jumpyoshim@gmail.com>"
+LABEL maintainer="saka2jp <saka2jp@gmail.com>"
 
 ENV PYTHONUNBUFFERED 1
 

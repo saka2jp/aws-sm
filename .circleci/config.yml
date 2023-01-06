@@ -11,7 +11,7 @@ workflows:
 jobs:
   test-3.11:
     docker:
-      - image: circleci/python:3.11
+      - image: cimg/python:3.11
         environment:
           PIPENV_VENV_IN_PROJECT: true
     working_directory: ~/repo
@@ -50,7 +50,7 @@ jobs:
             radon mi -n B .
   test-3.10:
     docker:
-      - image: circleci/python:3.10
+      - image: cimg/python:3.10
         environment:
           PIPENV_VENV_IN_PROJECT: true
     working_directory: ~/repo
@@ -89,7 +89,7 @@ jobs:
             radon mi -n B .
   test-3.9:
     docker:
-      - image: circleci/python:3.9
+      - image: cimg/python:3.9
         environment:
           PIPENV_VENV_IN_PROJECT: true
     working_directory: ~/repo
@@ -128,7 +128,7 @@ jobs:
             radon mi -n B .
   test-3.8:
     docker:
-      - image: circleci/python:3.8
+      - image: cimg/python:3.8
         environment:
           PIPENV_VENV_IN_PROJECT: true
     working_directory: ~/repo

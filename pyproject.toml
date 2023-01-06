@@ -31,10 +31,3 @@ dev = [
     "twine",
     "pytest-mock"
 ]
-
-[tool.isort]
-line_length = 120
-
-[tools.flake8]
-exclude = ".git,*migrations*,__init__.py"
-max-line-length = 120

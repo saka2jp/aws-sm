@@ -17,8 +17,6 @@ jobs:
     working_directory: ~/repo
     steps:
       - checkout
-      - run: sudo chown -R circleci:circleci /usr/local/bin
-      - run: sudo chown -R circleci:circleci /usr/local/lib/python3.11/site-packages
       - restore_cache:
           key: deps9-37-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
       - run:
@@ -56,8 +54,6 @@ jobs:
     working_directory: ~/repo
     steps:
       - checkout
-      - run: sudo chown -R circleci:circleci /usr/local/bin
-      - run: sudo chown -R circleci:circleci /usr/local/lib/python3.10/site-packages
       - restore_cache:
           key: deps9-37-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
       - run:
@@ -95,8 +91,6 @@ jobs:
     working_directory: ~/repo
     steps:
       - checkout
-      - run: sudo chown -R circleci:circleci /usr/local/bin
-      - run: sudo chown -R circleci:circleci /usr/local/lib/python3.9/site-packages
       - restore_cache:
           key: deps9-37-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
       - run:
@@ -134,8 +128,6 @@ jobs:
     working_directory: ~/repo
     steps:
       - checkout
-      - run: sudo chown -R circleci:circleci /usr/local/bin
-      - run: sudo chown -R circleci:circleci /usr/local/lib/python3.8/site-packages
       - restore_cache:
           key: deps9-37-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
       - run:

@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "62cebc183c2e45fa01bc957cdef0f2255861dbb95920364053aebb5d29f0825d"
+            "sha256": "b3808167f37eb208c08bda7da1b372a10288b4630aecacc8b0e7d77e67d171e9"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -411,7 +411,7 @@
                 "sha256:8bef7dde241278824a6d83f44a544709b065191b95b6e50894bdc722fcba0504",
                 "sha256:f84c2818376e66cf843d497486ea8fed8700b340f308f076c6fb1229dff318b6"
             ],
-            "markers": "python_version >= '3.8'",
+            "markers": "python_full_version >= '3.8.0'",
             "version": "==5.12.0"
         },
         "jaraco.classes": {
@@ -435,7 +435,7 @@
                 "sha256:4901caaf597bfd3bbd78c9a0c7c4c29fcd8310dab2cffefe749e916b6527acd6",
                 "sha256:ca0746a19ec421219f4d713f848fa297a661a8a8c1504867e55bfb5e09091509"
             ],
-            "markers": "python_version >= '3.8'",
+            "markers": "python_full_version >= '3.8.0'",
             "version": "==24.2.0"
         },
         "mando": {
@@ -534,11 +534,11 @@
         },
         "pytest-mock": {
             "hashes": [
-                "sha256:f4c973eeae0282963eb293eb173ce91b091a79c1334455acfac9ddee8a1c784b",
-                "sha256:fbbdb085ef7c252a326fd8cdcac0aa3b1333d8811f131bdcc701002e1be7ed4f"
+                "sha256:21c279fff83d70763b05f8874cc9cfb3fcacd6d354247a976f9529d19f9acf39",
+                "sha256:7f6b125602ac6d743e523ae0bfa71e1a697a2f5534064528c6ff84c2f7c2fc7f"
             ],
             "index": "pypi",
-            "version": "==3.10.0"
+            "version": "==3.11.1"
         },
         "radon": {
             "hashes": [
@@ -553,7 +553,7 @@
                 "sha256:9f77b519d96d03d7d7dce44977ba543090a14397c4f60de5b6eb5b8048110aa4",
                 "sha256:e18feb2a1e7706f2865b81ebb460056d93fb29d69daa10b223c00faa7bd9a00a"
             ],
-            "markers": "python_version >= '3.8'",
+            "markers": "python_full_version >= '3.8.0'",
             "version": "==40.0"
         },
         "requests": {

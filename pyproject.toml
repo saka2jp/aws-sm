@@ -4,9 +4,9 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "aws-sm"
-version = "1.2.0"
+version = "1.3.0"
 authors = [
-  { name="Jumpei Sakatsu", email="saka2jp@gmail.com" },
+    { name="Jumpei Sakatsu", email="saka2jp@gmail.com" },
 ]
 description = "A Python wrapper around the AWS Secrets Manager using Boto3"
 readme = "README.md"

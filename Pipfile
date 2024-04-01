@@ -7,7 +7,7 @@ name = "pypi"
 boto3 = "~=1.16"
 
 [dev-packages]
-pytest-cov = "~=4.1"
+pytest-cov = "~=5.0"
 flake8 = "~=7.0"
 flake8-isort = "~=6.1"
 radon = "~=6.0"

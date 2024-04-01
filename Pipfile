@@ -12,7 +12,7 @@ flake8 = "~=7.0"
 flake8-isort = "~=6.1"
 radon = "~=6.0"
 twine = "~=5.0"
-pytest-mock = "~=3.12"
+pytest-mock = "~=3.14"
 flake8-polyfill = "~=1.0"
 exceptiongroup = "~=1.2"
 
